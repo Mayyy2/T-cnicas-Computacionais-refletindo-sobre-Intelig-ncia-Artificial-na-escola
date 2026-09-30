@@ -3,6 +3,7 @@ const caixaPerguntas = document.querySelector(".caixa-perguntas");
 const caixaAlternativas = document.querySelector(".caixa-alternativas");
 const caixaResultado = document.querySelector(".caixa-resultado");
 const textoResultado = document.querySelector(".texto-resultado");
+
 const perguntas = [
     {
         enunciado: "Assim que saiu da escola você se depara com uma nova tecnologia, um chat que consegue responder todas as dúvidas que uma pessoa pode ter, ele também gera imagens e áudios hiper-realistas. Qual o primeiro pensamento?",
@@ -10,17 +11,17 @@ const perguntas = [
             {
                 texto: "Isso é assustador!",
                 afirmacao: [
-                    "Você percebe que uma tecnologia tão avançada pode trazer riscos quando utilizada de maneira irresponsável.",
-                    "Ao mesmo tempo, começa a pensar sobre a importância de aprender como a IA funciona antes de utilizá-la."
+                    "No início ficou com medo do que esta tecnologia pode fazer.",
+                    "Achou assustador pensar na velocidade na qual a tecnologia está avançando."
                 ]
             },
             {
                 texto: "Isso é maravilhoso!",
                 afirmacao: [
-                    "Você fica curioso para descobrir de que maneiras a IA pode ajudar nos estudos e nas tarefas do dia a dia.",
-                    "Também percebe que, apesar das possibilidades, é importante utilizar a tecnologia de forma responsável e consciente."
+                    "Quis saber como usar IA no seu dia a dia.",
+                    "Pensou que IA pode ajudar em tarefas da sua vida."
                 ]
-            }           
+            }
         ]
     },
     {
@@ -29,15 +30,15 @@ const perguntas = [
             {
                 texto: "Utilizar uma ferramenta de busca na internet que utiliza IA para que ela ajude a encontrar informações relevantes para o trabalho e explique numa linguagem que facilite o entendimento",
                 afirmacao: [
-                    "Você utiliza a IA como uma ferramenta de apoio, buscando informações e explicações que possam facilitar sua compreensão.",
-                    "Durante a pesquisa, percebe que é necessário conferir as informações encontradas e utilizar outras fontes para garantir a qualidade do trabalho."
+                    "Você acredita que as ferramentas de busca utilizando IA facilitam a aprendizagem.",
+                    "Além de facilitar a aprendizagem, a IA torna o trabalho mais ágil."
                 ]
             },
             {
                 texto: "Escrever o trabalho com base nas conversas que teve com colegas, algumas pesquisas na internet e conhecimentos próprios sobre o tema.",
                 afirmacao: [
-                    "Você decide construir o trabalho utilizando diferentes fontes e suas próprias ideias sobre o assunto.",
-                    "Ao pesquisar por conta própria, percebe que comparar informações de diferentes fontes ajuda a desenvolver uma visão mais crítica sobre o tema."
+                    "Você prefere realizar pesquisas por conta própria e utilizar seus próprios conhecimentos.",
+                    "Acredita que conversar com outras pessoas e pesquisar diferentes fontes ajuda a construir seu próprio conhecimento."
                 ]
             }
         ]
@@ -48,15 +49,15 @@ const perguntas = [
             {
                 texto: "Me preocupo com as pessoas que perderão seus empregos para máquinas e defendo a importância de proteger os trabalhadores.",
                 afirmacao: [
-                    "Você acredita que as mudanças provocadas pela IA precisam considerar os impactos sobre os trabalhadores.",
-                    "Também entende que será importante investir em educação e capacitação para ajudar as pessoas a se adaptarem às novas tecnologias."
+                    "Você se preocupa com a possibilidade de algumas profissões serem substituídas pela tecnologia.",
+                    "Acredita que é importante encontrar formas de preparar e proteger os trabalhadores diante das mudanças causadas pela IA."
                 ]
             },
             {
                 texto: "Defendo a ideia de que a IA pode criar novas oportunidades de emprego e melhorar habilidades humanas.",
                 afirmacao: [
-                    "Você acredita que a IA pode assumir algumas tarefas repetitivas e permitir que as pessoas se concentrem em atividades diferentes.",
-                    "Também percebe que novas profissões e habilidades podem surgir à medida que a tecnologia evolui."
+                    "Você acredita que a IA pode criar novas oportunidades de trabalho e profissões.",
+                    "Acredita que a tecnologia pode ajudar as pessoas a desenvolver e aprimorar suas habilidades."
                 ]
             }
         ]
@@ -67,15 +68,15 @@ const perguntas = [
             {
                 texto: "Criar uma imagem utilizando uma plataforma de design como o Paint.",
                 afirmacao: [
-                    "Você decide produzir a imagem manualmente, utilizando sua própria criatividade para representar suas ideias.",
-                    "Durante a criação, percebe que ferramentas tradicionais também podem ser utilizadas para expressar conceitos relacionados à tecnologia."
+                    "Você prefere utilizar ferramentas tradicionais para desenvolver suas próprias criações.",
+                    "Acredita que criar uma imagem manualmente permite expressar suas ideias de forma mais pessoal."
                 ]
             },
             {
                 texto: "Criar uma imagem utilizando um gerador de imagem de IA.",
                 afirmacao: [
-                    "Você utiliza a IA para transformar suas ideias em uma representação visual e experimentar diferentes possibilidades.",
-                    "Ao utilizar a ferramenta, percebe a importância de conhecer seus recursos e limitações para conseguir o resultado desejado."
+                    "Você considera os geradores de imagem de IA uma ferramenta útil para transformar ideias em imagens.",
+                    "Acredita que a IA pode tornar o processo de criação mais rápido e facilitar a experimentação de diferentes ideias."
                 ]
             }
         ]
@@ -86,19 +87,19 @@ const perguntas = [
             {
                 texto: "O chat pode ser uma tecnologia muito avançada, mas é preciso manter a atenção pois toda máquina erra, por isso revisar o trabalho e contribuir com as perspectivas pessoais é essencial.",
                 afirmacao: [
-                    "Você decide revisar o conteúdo produzido pela IA, verificando as informações e corrigindo possíveis erros.",
-                    "Além disso, incentiva o grupo a acrescentar suas próprias ideias e conhecimentos para que o trabalho realmente represente a participação de todos."
+                    "Você acredita que o conteúdo produzido por IA precisa ser revisado antes de ser utilizado.",
+                    "Considera importante contribuir com conhecimentos e perspectivas próprias para que o trabalho não dependa apenas da IA."
                 ]
             },
             {
                 texto: "Escrever comandos para o chat é uma forma de contribuir com o trabalho, por isso não é um problema utilizar o texto inteiro.",
                 afirmacao: [
-                    "Você considera que a elaboração dos comandos já representa uma forma de participação no desenvolvimento do trabalho.",
-                    "Porém, ao longo da discussão, percebe que utilizar o texto completo sem revisão pode dificultar a identificação de erros e limitar a contribuição dos integrantes."
+                    "Você considera que criar comandos para a IA também pode ser uma forma de participar da elaboração do trabalho.",
+                    "Acredita que utilizar o texto produzido pela IA pode ser aceitável quando a pessoa participa do processo por meio dos comandos."
                 ]
             }
         ]
-    },
+    }
 ];
 
 let atual = 0; 
