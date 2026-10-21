@@ -1,18 +1,14 @@
-import { aleatorio } from "./aleatorio.js";
-import { pergynta } from "./perguntas.js";
-
-
-
-<script type="module" src="js/aleatorio.js"></script>
-<script type="module" src="js/perguntas.js"></script>
-<script type="module" src="js/script.js"></script>
+import {aleatorio} from "./aleatorio.js";
+import {perguntas} from "./perguntas.js";
 
 const caixaPrincipal = document.querySelector(".caixa-principal");
 const caixaPerguntas = document.querySelector(".caixa-perguntas");
 const caixaAlternativas = document.querySelector(".caixa-alternativas");
 const caixaResultado = document.querySelector(".caixa-resultado");
 const textoResultado = document.querySelector(".texto-resultado");
-const botaoJogarNovamente = document.querySelector(".novamente-btn");
+const botaoJogarNovamente= document.querySelector(".novamente-btn")
+
+
 
 let atual = 0; 
 let perguntaAtual;
@@ -37,29 +33,30 @@ function mostraAlternativas(){
         caixaAlternativas.appendChild(botaoAlternativas);
     }
 }
+
 function respostaSelecionada(opcaoSelecionada){
-        const afirmacoes = aleatorio(opcaoSelecionada.afirmacao);
-        historiaFinal += afirmacoes + " ";
-        atual++;
-        mostraPergunta();
+    const afirmacoes = opcaoSelecionada.afirmacao;
+    historiaFinal += afirmacoes + " ";
+    atual++;
+    mostraPergunta();
 }
+
 function mostraResultado(){
     caixaPerguntas.textContent = "Em 2049...";
     textoResultado.textContent = historiaFinal;
-    caixaAlternativas.textContent = ""; 
-    function mostraResultado() {
-        caixaPerguntas.textContent = "Em 2049...";
-        textoResultado.textContent = historiaFinal;
-        caixaAlternativas.textContent = "";
+    caixaAlternativas.textContent = "";
+    caixaResultado.classlist.add(mostrar);
+    
+    
+    botaoJogarNovamente.addEventListener("click" , jogaNovamente);
+}
 
+function jogarNovamente(){
+    atual=0;
+    historiaFinal=""
+    mostraPergunta();
+    caixaResultado.classlist.remove(mostrar);
 }
-function aleatorio (lista){
-        const posicao = Math.floor(Math.random()* lista.length);
-        return lista[posicao];
-}
-function jogaNovamente(){
-        atual = 0;
-        historiaFinal = "";
-        mostraPergunta();
-}
+    
+
 mostraPergunta();
