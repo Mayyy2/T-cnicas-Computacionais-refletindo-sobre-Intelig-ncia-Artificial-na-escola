@@ -1,5 +1,7 @@
 import {aleatorio, nome} from "./aleatorio.js";
 import {perguntas} from "./perguntas.js";
+export const perguntas = [
+{
 
 const caixaPrincipal = document.querySelector(".caixa-principal");
 const caixaPerguntas = document.querySelector(".caixa-perguntas");
@@ -61,8 +63,14 @@ function jogarNovamente(){
     historiaFinal=""
     mostraPergunta();
     caixaResultado.classlist.remove(mostrar);
-    mostraPergunta();
-}
     
+}
+    function substituiNome(){
+    for(const pergunta of perguntas){
+        pergunta.enunciado = pergunta.enunciado.replace(/você/g, nome);
+    }
+}
+
+mostraPergunta();
 
 
