@@ -10,7 +10,7 @@ const caixaResultado = document.querySelector(".caixa-resultado");
 const textoResultado = document.querySelector(".texto-resultado");
 const botaoJogarNovamente= document.querySelector(".novamente-btn")
 
-
+const nomeSorteado = aleatorio(nomes);
 
 let atual = 0; 
 let perguntaAtual;
@@ -34,11 +34,6 @@ function mostraAlternativas(){
         botaoAlternativas.addEventListener("click", () => respostaSelecionada(alternativa));
         caixaAlternativas.appendChild(botaoAlternativas);
     }
-}
-
-function aleatorio(lista) {
-const posicao = Math.floor(Math.random()* lista.length);
-return lista[posicao];
 }
 
 function respostaSelecionada(opcaoSelecionada){
