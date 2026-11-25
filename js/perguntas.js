@@ -7,14 +7,16 @@ const perguntas = [
                 afirmacao: [
                     "Você percebe que uma tecnologia tão avançada pode trazer riscos quando utilizada de maneira irresponsável.",
                     "Ao mesmo tempo, começa a pensar sobre a importância de aprender como a IA funciona antes de utilizá-la."
-                ]
+                ],
+                proxima:1,
             },
             {
                 texto: "Isso é maravilhoso!",
                 afirmacao: [
                     "Você fica curioso para descobrir de que maneiras a IA pode ajudar nos estudos e nas tarefas do dia a dia.",
                     "Também percebe que, apesar das possibilidades, é importante utilizar a tecnologia de forma responsável e consciente."
-                ]
+                ],
+                proxima:2,
             }           
         ]
     },
@@ -26,14 +28,16 @@ const perguntas = [
                 afirmacao: [
                     "Você utiliza a IA como uma ferramenta de apoio, buscando informações e explicações que possam facilitar sua compreensão.",
                     "Durante a pesquisa, percebe que é necessário conferir as informações encontradas e utilizar outras fontes para garantir a qualidade do trabalho."
-                ]
+                ],
+                proxima:3,
             },
             {
                 texto: "Escrever o trabalho com base nas conversas que teve com colegas, algumas pesquisas na internet e conhecimentos próprios sobre o tema.",
                 afirmacao: [
                     "Você decide construir o trabalho utilizando diferentes fontes e suas próprias ideias sobre o assunto.",
                     "Ao pesquisar por conta própria, percebe que comparar informações de diferentes fontes ajuda a desenvolver uma visão mais crítica sobre o tema."
-                ]
+                ],
+                proxima:4,
             }
         ]
     },
@@ -45,14 +49,16 @@ const perguntas = [
                 afirmacao: [
                     "Você acredita que as mudanças provocadas pela IA precisam considerar os impactos sobre os trabalhadores.",
                     "Também entende que será importante investir em educação e capacitação para ajudar as pessoas a se adaptarem às novas tecnologias."
-                ]
+                ],
+                proxima:5,
             },
             {
                 texto: "Defendo a ideia de que a IA pode criar novas oportunidades de emprego e melhorar habilidades humanas.",
                 afirmacao: [
                     "Você acredita que a IA pode assumir algumas tarefas repetitivas e permitir que as pessoas se concentrem em atividades diferentes.",
                     "Também percebe que novas profissões e habilidades podem surgir à medida que a tecnologia evolui."
-                ]
+                ],
+                proxima:6,
             }
         ]
     },
@@ -64,14 +70,16 @@ const perguntas = [
                 afirmacao: [
                     "Você decide produzir a imagem manualmente, utilizando sua própria criatividade para representar suas ideias.",
                     "Durante a criação, percebe que ferramentas tradicionais também podem ser utilizadas para expressar conceitos relacionados à tecnologia."
-                ]
+                ],
+                proxima:7,
             },
             {
                 texto: "Criar uma imagem utilizando um gerador de imagem de IA.",
                 afirmacao: [
                     "Você utiliza a IA para transformar suas ideias em uma representação visual e experimentar diferentes possibilidades.",
                     "Ao utilizar a ferramenta, percebe a importância de conhecer seus recursos e limitações para conseguir o resultado desejado."
-                ]
+                ],
+                proxima:8,
             }
         ]
     },
@@ -83,14 +91,16 @@ const perguntas = [
                 afirmacao: [
                     "Você decide revisar o conteúdo produzido pela IA, verificando as informações e corrigindo possíveis erros.",
                     "Além disso, incentiva o grupo a acrescentar suas próprias ideias e conhecimentos para que o trabalho realmente represente a participação de todos."
-                ]
+                ],
+                proxima:9,
             },
             {
                 texto: "Escrever comandos para o chat é uma forma de contribuir com o trabalho, por isso não é um problema utilizar o texto inteiro.",
                 afirmacao: [
                     "Você considera que a elaboração dos comandos já representa uma forma de participação no desenvolvimento do trabalho.",
                     "Porém, ao longo da discussão, percebe que utilizar o texto completo sem revisão pode dificultar a identificação de erros e limitar a contribuição dos integrantes."
-                ]
+                ],
+                proxima:10,
             }
         ]
     },
