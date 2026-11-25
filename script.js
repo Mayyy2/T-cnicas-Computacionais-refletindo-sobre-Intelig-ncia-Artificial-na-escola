@@ -6,14 +6,23 @@ const caixaPerguntas = document.querySelector(".caixa-perguntas");
 const caixaAlternativas = document.querySelector(".caixa-alternativas");
 const caixaResultado = document.querySelector(".caixa-resultado");
 const textoResultado = document.querySelector(".texto-resultado");
-const botaoJogarNovamente= document.querySelector(".novamente-btn")
+const botaoJogarNovamente= document.querySelector(".novamente-btn");
 
 const nomeSorteado = aleatorio(nomes);
-const botaoIniciar=document.querySelector(".inicir-btn")
+const botaoIniciar=document.querySelector(".inicir-btn");
 
 let atual = 0; 
 let perguntaAtual;
 let historiaFinal = "";
+
+botaoIniciar.addEventListener('click',iniciaJogo);
+
+function iniciaJogo(){
+atual = 0;
+historiaFinal = "";
+telaInicial.style.display='none';
+perguntas.classlist.remove("mostrar");
+}
 
 function mostraPergunta() {
     if(atual >= perguntas.length){
