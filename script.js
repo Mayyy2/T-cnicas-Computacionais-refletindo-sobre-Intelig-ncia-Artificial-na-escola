@@ -9,6 +9,7 @@ const textoResultado = document.querySelector(".texto-resultado");
 const botaoJogarNovamente= document.querySelector(".novamente-btn")
 
 const nomeSorteado = aleatorio(nomes);
+const botaoIniciar=document.querySelector(".inicir-btn")
 
 let atual = 0; 
 let perguntaAtual;
