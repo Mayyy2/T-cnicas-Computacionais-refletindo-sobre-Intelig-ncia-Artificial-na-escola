@@ -21,7 +21,11 @@ function iniciaJogo(){
 atual = 0;
 historiaFinal = "";
 telaInicial.style.display='none';
-perguntas.classlist.remove("mostrar");
+
+caixaPerguntas.classlist.remove("mostrar";)
+caixaAlternativas.classlist.remove("mostrar";)
+caixaResultado.classlist.remove("mostrar";)
+mostraPergunta();
 }
 
 function mostraPergunta() {
